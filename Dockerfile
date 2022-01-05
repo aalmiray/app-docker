@@ -1,4 +1,4 @@
-# Generated with JReleaser 0.10.0 at 2022-01-05T16:44:36.75433+01:00
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-05T17:20:00.436319+01:00
 FROM azul/zulu-openjdk-alpine:8-jre
 
 LABEL "org.opencontainers.image.title"="app"
