@@ -1,13 +1,15 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-05T17:20:00.436319+01:00
-FROM azul/zulu-openjdk-alpine:8-jre
+# Generated with JReleaser 1.0.0 at 2022-05-25T13:21:31.144-07:00
+FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="app"
 LABEL "org.opencontainers.image.description"="Sample application"
-LABEL "org.opencontainers.image.url"="https://acme.com/wesome-app"
+LABEL "org.opencontainers.image.url"="https://acme.com/awesome-app"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.0.0"
 LABEL "org.opencontainers.image.revision"="4df324cdd4ce8845bdcea07c32d478593627d42d"
 
+RUN apt-get update -y
+RUN apt-get install unzip
 
 COPY assembly/ /
 
