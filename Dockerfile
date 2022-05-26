@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.0.0 at 2022-05-25T13:21:31.144-07:00
+# Generated with JReleaser 1.0.0 at 2022-05-25T17:24:05.264-07:00
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="app"
