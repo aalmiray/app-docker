@@ -1,4 +1,4 @@
 #!/bin/sh
-# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-11-14T18:04:58.985472+02:00
+# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-11-14T18:10:17.922856+02:00
 
 $JAVA_HOME/bin/java $JAVA_OPTS -jar /app-1.0.0/lib/app-1.0.0.jar "$@"
