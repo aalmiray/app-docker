@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-11-14T18:15:48.444779+02:00
+# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-11-15T16:07:37.6738+02:00
 FROM azul/zulu-openjdk:19-jre
 
 LABEL "org.opencontainers.image.title"="app"
@@ -14,14 +14,11 @@ RUN apt-get update && apt-get install -y unzip binutils
 
 COPY assembly/ /
 
-RUN mkdir -p /app-1.0.0/bin && \
-    mkdir -p /app-1.0.0/lib && \
-    mv /app /app-1.0.0/bin && \
-    chmod +x /app-1.0.0/bin/app && \
-    mv /app-1.0.0.jar /app-1.0.0/lib
+RUN unzip app-1.0.0.zip && \
+    rm app-1.0.0.zip && \
+    chmod +x app-1.0.0/bin/app
+
 
 ENV PATH="${PATH}:/app-1.0.0/bin"
 
-
 ENTRYPOINT ["/app-1.0.0/bin/app"]
-CMD ["app"]
